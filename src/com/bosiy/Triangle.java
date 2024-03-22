@@ -20,9 +20,9 @@ public class Triangle {
     public String variation() {
         if (sideA == sideB && sideB == sideC) {
             return "Этот треугольник равносторонний.";
-        } else if (sideA == sideB && sideA != sideC
-                || sideA == sideC && sideB != sideA
-                || sideB == sideC && sideB != sideA) {
+        } else if (sideA == sideB
+                || sideA == sideC
+                || sideB == sideC) {
             return "Этот треугольник равнобедренный.";
         } else {
             return "Этот треугольник разносторонний";
