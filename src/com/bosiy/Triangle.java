@@ -9,7 +9,7 @@ public class Triangle {
         this.sideB = sideB;
         this.sideC = sideC;
     }
-    public String treangle() {
+    public String triangle() {
         return "side a = " + sideA + "; " + " side b = " + sideB + "; " +
                 " side c = " + sideC + "; ";
     }
@@ -23,6 +23,6 @@ public class Triangle {
         if (sideA != sideB && sideB != sideC && sideA != sideC) {
             System.out.println("Этот треугольник разносторонний");
         }
-        return treangle();
+        return triangle();
     }
 }
