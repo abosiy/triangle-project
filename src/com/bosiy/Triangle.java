@@ -1,4 +1,5 @@
 package com.bosiy;
+
 public class Triangle {
     private final int sideA;
     private final int sideB;
@@ -9,20 +10,22 @@ public class Triangle {
         this.sideB = sideB;
         this.sideC = sideC;
     }
-    public String triangle() {
+
+    @Override
+    public String toString() {
         return "side a = " + sideA + "; " + " side b = " + sideB + "; " +
                 " side c = " + sideC + "; ";
     }
+
     public String variation() {
         if (sideA == sideB && sideB == sideC) {
-            System.out.println("Этот треугольник равносторонний.");
+            return "Этот треугольник равносторонний.";
+        } else if (sideA == sideB && sideA != sideC
+                || sideA == sideC && sideB != sideA
+                || sideB == sideC && sideB != sideA) {
+            return "Этот треугольник равнобедренный.";
+        } else {
+            return "Этот треугольник разносторонний";
         }
-        if (sideA == sideB && sideA != sideC) {
-            System.out.println("Этот треугольник равнобедренный.");
-        }
-        if (sideA != sideB && sideB != sideC && sideA != sideC) {
-            System.out.println("Этот треугольник разносторонний");
-        }
-        return triangle();
     }
 }
