@@ -7,7 +7,8 @@ public class Triangle {
 
     public Triangle(int sideA, int sideB, int sideC) {
         if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
-            System.out.println("Side hasn't been negative value!\nDefault value is a assigned.");
+            System.out.println("Side hasn't been negative value!" +
+                    "\nDefault value is assigned.");
             this.sideA = 1;
             this.sideB = 1;
             this.sideC = 1;
@@ -15,7 +16,7 @@ public class Triangle {
         }
 
         if (isNotValidTriangle(sideA, sideB, sideC)) {
-            System.out.println("It's not impossible!");
+            System.out.println("It's impossible!");
             this.sideA = 1;
             this.sideB = 1;
             this.sideC = 1;
@@ -33,7 +34,9 @@ public class Triangle {
     }
 
     public boolean isNotValidTriangle(int sideA, int sideB, int sideC) {
-        return sideA > sideB + sideC || sideB > sideA + sideC || sideC > sideA + sideB;
+        return sideA > sideB + sideC
+                || sideB > sideA + sideC
+                || sideC > sideA + sideB;
     }
 
     public String getTriangleType() {
